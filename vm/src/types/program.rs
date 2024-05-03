@@ -364,7 +364,7 @@ impl From<&HintsCollection> for BTreeMap<usize, Vec<HintParams>> {
 /// Represents a range of hints corresponding to a PC.
 ///
 /// Is [`None`] if the range is empty, and it is [`Some`] tuple `(start, length)` otherwise.
-type HintRange = Option<(usize, NonZeroUsize)>;
+pub type HintRange = Option<(usize, NonZeroUsize)>;
 
 #[cfg_attr(all(feature = "arbitrary", feature = "std"), derive(Arbitrary))]
 #[derive(Clone, Debug, PartialEq, Eq)]

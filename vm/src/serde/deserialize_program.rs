@@ -564,7 +564,7 @@ pub struct HintLocation {
     pub n_prefix_newlines: u32,
 }
 
-fn felt_from_number<'de, D>(deserializer: D) -> Result<Option<Felt252>, D::Error>
+pub fn felt_from_number<'de, D>(deserializer: D) -> Result<Option<Felt252>, D::Error>
 where
     D: Deserializer<'de>,
 {
@@ -767,7 +767,7 @@ impl<'de> de::Visitor<'de> for MaybeRelocatableVisitor {
     }
 }
 
-struct ReferenceIdsVisitor;
+pub struct ReferenceIdsVisitor;
 
 impl<'de> de::Visitor<'de> for ReferenceIdsVisitor {
     type Value = HashMap<String, usize>;
