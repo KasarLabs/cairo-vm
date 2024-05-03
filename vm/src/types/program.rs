@@ -238,9 +238,9 @@ impl<'a> Arbitrary<'a> for SharedProgramData {
 
 #[derive(Clone, Default, Debug, PartialEq, Eq)]
 pub struct HintsCollection {
-    hints: Vec<HintParams>,
+    pub hints: Vec<HintParams>,
     /// This maps a PC to the range of hints in `hints` that correspond to it.
-    hints_ranges: Vec<HintRange>,
+    pub hints_ranges: Vec<HintRange>,
 }
 
 #[cfg(feature = "scale-info")]
