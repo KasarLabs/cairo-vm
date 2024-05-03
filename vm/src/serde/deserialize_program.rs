@@ -209,7 +209,7 @@ impl parity_scale_codec::Decode for FlowTrackingData {
 }
 
 #[cfg_attr(all(feature = "arbitrary", feature = "std"), derive(Arbitrary))]
-#[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
+#[derive(Serialize, Deserialize, Debug, Clone, Copy, PartialEq, Eq)]
 pub struct ApTracking {
     pub group: usize,
     pub offset: usize,
